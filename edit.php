@@ -9,7 +9,7 @@ if (isset($_GET['id'])){
   $result = mysqli_query($conn, $query);
   if(mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
-    $title = $row('title');
+    $title = $row['title'];
     $description = $row['description'];
   }
 }
@@ -52,4 +52,4 @@ if(isset($_POST['update'])) {
     </div>
   </div>
 </div>
-<?php include('include/footer.php'); ?>
+<?php include('includes/footer.php'); ?>
